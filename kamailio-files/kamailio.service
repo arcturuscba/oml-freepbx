@@ -1,0 +1,19 @@
+[Unit]
+Description=Kamailio SIP Server
+Documentation=man:kamailio(8) http://www.kamailio.org/
+After=syslog.target network-online.target postgresql.service
+
+[Service]
+Type=forking
+User=kamailio
+Environment=SHM_SIZE=64
+Environment=PKG_SIZE=8
+ExecStartPre=/opt/kamailio/sbin/kamailio -c
+ExecStart=/opt/kamailio/sbin/kamailio -m $SHM_SIZE -M $PKG_SIZE -P /var/run/kamailio/kamailio.pid
+ExecStopPost=/usr/bin/rm -f /var/run/kamailio/kamailio.pid
+PIDFile=/var/run/kamailio/kamailio.pid
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
