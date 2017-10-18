@@ -15,7 +15,7 @@ $campana=$argv[6];
 $fecha=$argv[7];
 //$fecha=date('Y-m-d H:m:s');
 
-$connection=pg_connect("host=192.168.1.83 port=5432 password=kamailiorw user=kamailio")
+$connection=pg_connect("host=127.0.0.1 port=5432 password=kamailiorw user=kamailio")
 or die('NO HAY CONEXION: ' . pg_last_error()); 
 
 $query ="INSERT INTO ominicontacto_app_grabacion (fecha,tipo_llamada,id_cliente,tel_cliente,grabacion,sip_agente,campana_id) VALUES ('$fecha','$tipo_llamada','$id_cliente','$tel_cliente','$grabacion','$sip_agente','$campana');"; 
