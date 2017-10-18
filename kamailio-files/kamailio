@@ -5,4 +5,4 @@ SHM_MEMORY=64
 PKG_MEMORY=8 
 PIDFILE=/opt/kamailio/run/kamailio/kamailio.pid 
 CFGFILE=/opt/kamailio/etc/kamailio/kamailio.cfg 
-#DUMP_CORE=yes 
+DUMP_CORE=yes 
