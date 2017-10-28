@@ -18,7 +18,7 @@
 DBENGINE=PGSQL
 
 ## database host
-DBHOST=localhost
+DBHOST=127.0.0.1
 
 ## database name (for ORACLE this is TNS name)
 DBNAME=kamailio
