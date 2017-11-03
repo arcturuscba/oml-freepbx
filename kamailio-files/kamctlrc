@@ -18,7 +18,7 @@
 DBENGINE=PGSQL
 
 ## database host
-DBHOST=localhost
+DBHOST=127.0.0.1
 
 ## database name (for ORACLE this is TNS name)
 DBNAME=kamailio
@@ -143,7 +143,7 @@ DBROOTUSER="kamailio"
 
 ## Kamailio START Options
 ## PID file path - default is: /var/run/kamailio.pid
-# PID_FILE=/var/run/kamailio/kamailio.pid
+#PID_FILE=/var/run/kamailio/kamailio.pid
 
 ## Extra start options - default is: not set
 # example: start Kamailio with 64MB share memory: STARTOPTIONS="-m 64"
